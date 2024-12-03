@@ -75,10 +75,19 @@ WSGI_APPLICATION = 'phattrienweb_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        "ENGINE": "mssql",
+        'NAME': 'django_db',  # Tên database
+        'USER': 'sa',  # Tên người dùng SQL Server
+        'PASSWORD': '1',  # Mật khẩu
+        'HOST': 'DINHCUONG\\SQLEXPRESS',  # Địa chỉ máy chủ
+        'PORT': '1433',  # Cổng mặc định của SQL Server
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',  # Đảm bảo cài đặt ODBC Driver
+        },
     }
 }
+
+
 
 
 # Password validation

@@ -74,14 +74,27 @@ WSGI_APPLICATION = "phattrienweb_django.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.mysql",
+#         "NAME": "django_db",  # Tên database
+#         "USER": "root",  # Tên người dùng SQL Server
+#         "PASSWORD": "123456",  # Mật khẩu
+#         "HOST": "localhost",  # Địa chỉ máy chủ
+#         "PORT": "3306",  # Cổng mặc định của SQL Server
+#     }
+# }
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "django_db",  # Tên database
-        "USER": "root",  # Tên người dùng SQL Server
-        "PASSWORD": "123456",  # Mật khẩu
-        "HOST": "localhost",  # Địa chỉ máy chủ
-        "PORT": "3306",  # Cổng mặc định của SQL Server
+    'default': {
+        "ENGINE": "mssql",
+        'NAME': 'django_db',  # Tên database
+        'USER': 'sa',  # Tên người dùng SQL Server
+        'PASSWORD': '1',  # Mật khẩu
+        'HOST': 'DINHCUONG\\SQLEXPRESS',  # Địa chỉ máy chủ
+        'PORT': '1433',  # Cổng mặc định của SQL Server
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',  # Đảm bảo cài đặt ODBC Driver
+        },
     }
 }
 

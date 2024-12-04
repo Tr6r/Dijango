@@ -1,0 +1,32 @@
+<!-- articles_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Articles List</title>
+</head>
+<body>
+    <h1>Articles</h1>
+    
+    <!-- Nút Thêm Bài Viết -->
+    <a href="{% url 'admin:index' %}">
+        Admin page
+    </a>
+    <a style="margin-left: 50px;"  href="{% url 'add_article' %}">Thêm Bài Viết</a>
+
+    <ul>
+        {% for article in articles %}
+            <li>
+                <strong>{{ article.header }}</strong><br>
+                {{ article.body }}<br>
+                <small>Written by: {{ article.user.username }} on {{ article.date }}</small><br>
+
+                <!-- Nút Sửa Bài Viết -->
+                <a href="{% url 'edit_article' article.id %}">Sửa</a> 
+
+                <!-- Nút Xóa Bài Viết -->
+                <a href="{% url 'delete_article' article.id %}" onclick="return confirm('Are you sure you want to delete this article?');">Xóa</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

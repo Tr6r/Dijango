@@ -1,0 +1,18 @@
+<!-- edit_article.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sửa Bài Viết</title>
+</head>
+<body>
+    <h1>Sửa Bài Viết</h1>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Lưu</button>
+    </form>
+
+    <a href="{% url 'article_list' %}">Trở lại danh sách bài viết</a>
+</body>
+</html>

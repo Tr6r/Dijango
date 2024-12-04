@@ -1,0 +1,18 @@
+<!-- add_article.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thêm Bài Viết</title>
+</head>
+<body>
+    <h1>Thêm Bài Viết</h1>
+    
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Lưu</button>
+    </form>
+
+    <a href="{% url 'article_list' %}">Trở lại danh sách bài viết</a>
+</body>
+</html>

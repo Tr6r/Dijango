@@ -1,12 +1,13 @@
 from django.contrib import admin
-
+from django.shortcuts import redirect
 # Register your models here.
 from .models import Articles  # Nhập model Articles từ myapp/models.py
 
 class ArticlesAdmin(admin.ModelAdmin):
-    list_display = ('header', 'user', 'date')  # Hiển thị các trường trong bảng admin
-    search_fields = ('header', 'body')  # Các trường có thể tìm kiếm
-    list_filter = ('user', 'date')  # Bộ lọc cho các trường 'user' và 'date'
+    # Ghi đè trang mặc định để chuyển hướng trực tiếp
+    def changelist_view(self, request, extra_context=None):
+        # Redirect tới trang custom view
+        return redirect('article_list')  # Điều hướng tới view 'article_list'
 
-# Đăng ký model Articles vào admin
+# Đăng ký model với admin
 admin.site.register(Articles, ArticlesAdmin)

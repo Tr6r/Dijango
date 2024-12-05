@@ -4,6 +4,20 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CustomUserCreationForm
 from .models import Articles
 from .forms import ArticleForm  
+from django.contrib.auth import login, authenticate
+
+def admin_login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('/myapp/admin/')  # Đăng nhập xong quay về admin
+        else:
+            return render(request, 'admin_login.html', {'error': 'Invalid credentials'})
+    else : 
+        return render(request, 'admin_login.html')
 
 def signup(request):
     if request.method == "POST":

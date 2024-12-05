@@ -48,6 +48,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'myapp.middleware.AdminLoginRequiredMiddleware',  # Thêm middleware bạn vừa viết
+
 ]
 
 ROOT_URLCONF = "phattrienweb_django.urls"
@@ -142,4 +144,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
 LOGIN_REDIRECT_URL = "/myapp/home"
+

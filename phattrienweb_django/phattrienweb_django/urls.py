@@ -23,11 +23,8 @@ from django.contrib import admin
 
 urlpatterns = [
     path("myapp/", include("myapp.urls")),
-    path("admin/", admin.site.urls, name="admin"),
-    path('articles/', views.article_list, name='article_list'),
-    path('articles/add/', views.add_article, name='add_article'),  # Thêm bài viết
-    path('articles/edit/<int:id>/', views.edit_article, name='edit_article'),  # Sửa bài viết
-    path('articles/delete/<int:id>/', views.delete_article, name='delete_article'),  # Xóa bài viết
+    path("myapp/admin/", admin.site.urls, name="admin"),
+  
 
     path("", views.home, name="home"),
 ]

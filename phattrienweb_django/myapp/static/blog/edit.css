@@ -1,0 +1,88 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+/* Container for form */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Heading style */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4A90E2;
+    text-align: center;
+}
+
+/* Form field style */
+form p {
+    margin-bottom: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Button style */
+button {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Link style */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #4A90E2;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+label {
+    text-decoration: none;
+    color: #4A90E2;
+    font-size: 14px;
+    margin-right: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}

@@ -1,0 +1,94 @@
+/* static/blog/styles.css */
+
+/* Đặt màu nền và font chữ cho trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tiêu đề chính */
+h1 {
+    text-align: center;
+    color: #4A90E2;
+    margin-top: 20px;
+}
+
+/* Định dạng cho danh sách bài viết */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+}
+
+li {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+li strong {
+    font-size: 18px;
+    color: #333;
+}
+
+li small {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+}
+
+/* Các nút Thêm, Sửa, Xóa */
+a {
+    text-decoration: none;
+    color: #4A90E2;
+    font-size: 14px;
+    margin-right: 15px;
+    border: 1px solid #4A90E2;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Nút "Sửa" và "Xóa" */
+a:hover {
+    background-color: #4A90E2;
+    color: white;
+}
+
+/* Đặt màu nền và border cho Admin page */
+a.admin-page {
+    background-color: #F8F8F8;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Nút thêm bài viết */
+a.add-article {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+a.add-article:hover {
+    background-color: #357ABD;
+}
+
+/* Giữ khoảng cách cho các phần tử */
+a, a.admin-page, a.add-article {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* Tạo khoảng cách giữa các mục bài viết */
+li + li {
+    margin-top: 20px;
+}

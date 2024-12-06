@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.shortcuts import redirect
 # Register your models here.
-from .models import Articles  # Nhập model Articles từ myapp/models.py
+from .models import Articles  
 
 class ArticlesAdmin(admin.ModelAdmin):
     # Ghi đè trang mặc định để chuyển hướng trực tiếp

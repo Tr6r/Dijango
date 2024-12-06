@@ -1,18 +1,23 @@
+{% load static %}
 <!-- edit_article.html -->
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Sửa Bài Viết</title>
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'blog/edit.css' %}"
+    />
+  </head>
+  <body>
     <h1>Sửa Bài Viết</h1>
-    
+
     <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Lưu</button>
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Lưu</button>
     </form>
 
     <a href="{% url 'article_list' %}">Trở lại danh sách bài viết</a>
-</body>
+  </body>
 </html>
